@@ -35,8 +35,12 @@ class FamilyStructure:
         return self._members
 
     def delete_member(self, id):
-        # Fill this method and update the return
-        pass
+        result = []
+        for member in self._members:
+            if member["id"] != id:
+                result.append(member)
+        self._members = result
+        return self._members
 
     def get_member(self, id):
         result = []
